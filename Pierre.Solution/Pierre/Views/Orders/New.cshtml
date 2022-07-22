@@ -2,17 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My song List!</title>
+    <title>My order List!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
     <h1>Add a new Order to @Model.Name</h1>
 
-    <form action="/albums/@Model.Id/songs" method="post">
-      <input id="albumId" name="albumId" type="hidden" value="@Model.Id">
-      <label for="songDescription">Song Title</label>
-      <input id="songDescription" name="songDescription" type="text">
-      <button type='submit'>Add Song</button>
+    <form action="/vendors/@Model.Id/orders" method="post">
+      <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+      <label for="orderDescription">Order Title</label>
+      <input id="orderDescription" name="orderDescription" type="text">
+      <button type='submit'>Add Order</button>
     </form>
   </body>
 </html>
