@@ -2,26 +2,26 @@ using Microsoft.AspNetCore.Mvc;
 using Catalogue.Models;
 using System.Collections.Generic;
 
-namespace Catalogue.Controllers
+namespace Pierre.Controllers
 {
-  public class SongsController : Controller
+  public class OrdersController : Controller
   {
 
-    [HttpGet("/albums/{albumId}/songs/new")]
-    public ActionResult New(int albumId)
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
     {
-      Album album = Album.Find(albumId);
-      return View(album);
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
     }
 
-    [HttpGet("/albums/{albumId}/songs/{songId}")]
-    public ActionResult Show(int albumId, int songId)
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Show(int vendorId, int orderId)
     {
-      Song song = Song.Find(songId);
-      Album album = Album.Find(albumId);
+      Order order = Order.Find(orderId);
+      Vendor vendor = Vendor.Find(vendorId);
       Dictionary<string, object> model = new Dictionary<string, object>();
-      model.Add("song", song);
-      model.Add("album", album);
+      model.Add("order", order);
+      model.Add("vendor", vendor);
       return View(model);
     }
   }
