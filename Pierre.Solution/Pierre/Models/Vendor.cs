@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 
-namespace Catalogue.Models
+namespace Pierre.Models
 {
-  public class Album
+  public class Vendor
   {
-    private static List<Album> _instances = new List<Album> {};
+    private static List<Vendor> _instances = new List<Vendor> {};
     public string Name { get; set; }
     public int Id { get; }
-    public List<Song> Songs { get; set; }
+    public List<Order> Orders { get; set; }
   
 
-  public Album(string albumName)
+  public Vendor(string vendorName)
   {
-    Name = albumName;
+    Name = vendorName;
     _instances.Add(this);
     Id = _instances.Count;
-    Songs = new List<Song>{};
+    Orders = new List<Order>{};
   }
 
   public static void ClearAll()
@@ -23,19 +23,19 @@ namespace Catalogue.Models
     _instances.Clear();
   }
 
-  public static List<Album> GetAll()
+  public static List<Vendor> GetAll()
   {
     return _instances;
   }
 
-  public static Album Find(int searchId)
+  public static Vendor Find(int searchId)
   {
     return _instances[searchId-1];
   }
 
-  public void AddSong(Song song)
+  public void AddOrder(Order order)
   {
-    Songs.Add(song);
+    Orders.Add(order);
   }
 
 }

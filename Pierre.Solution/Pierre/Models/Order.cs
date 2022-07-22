@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Catalogue.Models
+namespace Pierre.Models
 {
   public class Song
   {
