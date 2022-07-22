@@ -2,23 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Album List!</title>
+    <title>Vendor List!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
-    @using Catalogue.Models;
+    @using Pierre.Models;
 
-    <h3>Here are all the songs in this album:</h3>
+    <h3>Here are all the orders in this vendor:</h3>
 
     <ol>
-    @foreach (Song song in @Model["songs"])
+    @foreach (Order order in @Model["orders"])
     {
-      <li><a href='/albums/@Model["album"].Id/songs/@song.Id'>@song.Description</a></li>
+      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></li>
     }
     </ol>
 
-    <p><a href='/albums/@Model["album"].Id/songs/new'>Add a new Song</a></p>
-    <p><a href='/albums'>Return to album list</a></p>
+    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+    <p><a href='/vendors'>Return to vendor list</a></p>
     <p><a href='/'>Return to Main Page</a></p>
   </body>
 </html>
