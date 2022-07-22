@@ -7,47 +7,47 @@ namespace Pierre.Controllers
 {
   public class VendorsController : Controller
   {
-    [HttpGet("/albums")]
+    [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      List<Album> allAlbum = Album.GetAll();
-      return View(allAlbum);
+      List<Vendor> allVendor = Vendor.GetAll();
+      return View(allVendor);
     }
 
-    [HttpGet("/albums/new")]
+    [HttpGet("/vendors/new")]
     public ActionResult New()
     {
       return View();
     }
 
-    [HttpPost("/albums")]
-    public ActionResult Create(string albumName)
+    [HttpPost("/vendors")]
+    public ActionResult Create(string vendorName)
     {
-      Album newAlbum = new Album(albumName);
+      Vendor newVendor = new Vendor(vendorName);
       return RedirectToAction("Index");
     }
 
-    [HttpGet("/albums/{id}")]
+    [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Album selectedAlbum = Album.Find(id);
-      List<Song> albumSongs = selectedAlbum.Songs;
-      model.Add("album", selectedAlbum);
-      model.Add("songs", albumSongs);
+      Vendor selectedVendor = Vendor.Find(id);
+      List<Order> vendorOrders = selectedVendor.Orders;
+      model.Add("vendor", selectedVendor);
+      model.Add("orders", vendorOrders);
       return View(model);
     }
-    // this one creates new songs within a given album, not new albums;
-    [HttpPost("/albums/{albumId}/songs")]
-    public ActionResult New(int albumId, string songDescription)
+    // this one creates new orders within a given vendor, not new vendorss;
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult New(int vendorId, string orderDescription)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Album foundAlbum = Album.Find(albumId);
-      Song newSong = new Song(songDescription);
-      foundAlbum.AddSong(newSong);
-      List<Song> albumSongs = foundAlbum.Songs;
-      model.Add("songs", albumSongs);
-      model.Add("album", foundAlbum);
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order newOrder = new Order(orderDescription);
+      foundVendor.AddOrder(newOrder);
+      List<Order> vendorOrders = foundVendor.Orders;
+      model.Add("orders", vendorOrders);
+      model.Add("vendor", foundVendor);
       return View("Show", model);
     }
 
