@@ -66,21 +66,21 @@ namespace Pierre.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
-    // [TestMethod]
-    // public void Find_ReturnsCorrectAlbum_Album()
-    // {
-    //   //Arrange
-    //   string name01 = "Work";
-    //   string name02 = "School";
-    //   Album newAlbum1 = new Album(name01);
-    //   Album newAlbum2 = new Album(name02);
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      //Arrange
+      string name01 = "Suzie's Cafe";
+      string name02 = "Trevett's Cafe";
+      Vendor newVendor1 = new Vendor(name01);
+      Vendor newVendor2 = new Vendor(name02);
 
-    //   //Act
-    //   Album result = Album.Find(2);
+      //Act
+      Vendor result = Vendor.Find(2);
 
-    //   //Assert
-    //   Assert.AreEqual(newAlbum2, result);
-    // }
+      //Assert
+      Assert.AreEqual(newVendor2, result);
+    }
 
     // [TestMethod]
     // public void AddItem_AssociatesItemWithCategory_ItemList()
