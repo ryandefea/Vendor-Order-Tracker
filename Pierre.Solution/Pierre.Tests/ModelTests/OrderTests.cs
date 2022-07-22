@@ -90,20 +90,20 @@ namespace Pierre.Tests
       Assert.AreEqual(1,result);
     }
 
-    // [TestMethod]
-    // public void Find_ReturnsCorrectItem_Order()
-    // {
-    //   //Arrange
-    //   string description01 = "Walk the dog";
-    //   string description02 = "Wash the dishes";
-    //   Order newOrder1 = new Order(description01);
-    //   Order newOrder2 = new Order(description02);
+    [TestMethod]
+    public void Find_ReturnsCorrectItem_Order()
+    {
+      //Arrange
+      string description01 = "Hotdogs";
+      string description02 = "Buns";
+      Order newOrder1 = new Order(description01);
+      Order newOrder2 = new Order(description02);
 
-    //   //Act
-    //   Order result = Order.Find(2);
+      //Act
+      Order result = Order.Find(2);
 
-    //   //Assert
-    //   Assert.AreEqual(newOrder2, result);
-    // }
+      //Assert
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
