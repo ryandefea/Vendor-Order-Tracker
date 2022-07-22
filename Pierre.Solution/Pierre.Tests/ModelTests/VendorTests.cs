@@ -49,22 +49,22 @@ namespace Pierre.Tests
       Assert.AreEqual(1, result);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsAllAlbumObjects_AlbumList()
-    // {
-    //   //Arrange
-    //   string name01 = "Work";
-    //   string name02 = "School";
-    //   Album newAlbum1 = new Album(name01);
-    //   Album newAlbum2 = new Album(name02);
-    //   List<Album> newList = new List<Album> { newAlbum1, newAlbum2 };
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      //Arrange
+      string name01 = "Suzie's Cafe";
+      string name02 = "Trevett's Cafe";
+      Vendor newVendor1 = new Vendor(name01);
+      Vendor newVendor2 = new Vendor(name02);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
-    //   //Act
-    //   List<Album> result = Album.GetAll();
+      //Act
+      List<Vendor> result = Vendor.GetAll();
 
-    //   //Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
 
     // [TestMethod]
     // public void Find_ReturnsCorrectAlbum_Album()
