@@ -25,7 +25,7 @@ namespace Pierre.Tests
     public void GetDescription_ReturnsDescription_String()
     {
       //Arrange
-      string description = "";
+      string description = "Hotdogs";
 
       //Act
       Order newOrder = new Order(description);

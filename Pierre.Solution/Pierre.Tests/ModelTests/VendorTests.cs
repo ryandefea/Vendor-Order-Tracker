@@ -21,19 +21,19 @@ namespace Pierre.Tests
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
-    // [TestMethod]
-    // public void GetName_ReturnsName_String()
-    // {
-    //   //Arrange
-    //   string name = "Test Album";
-    //   Album newAlbum = new Album(name);
+    [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+      //Arrange
+      string name = "Suzie's Cafe";
+      Vendor newVendor = new Vendor(name);
 
-    //   //Act
-    //   string result = newAlbum.Name;
+      //Act
+      string result = newVendor.Name;
 
-    //   //Assert
-    //   Assert.AreEqual(name, result);
-    // }
+      //Assert
+      Assert.AreEqual(name, result);
+    }
 
     // [TestMethod]
     // public void GetId_ReturnsAlbumId_Int()
