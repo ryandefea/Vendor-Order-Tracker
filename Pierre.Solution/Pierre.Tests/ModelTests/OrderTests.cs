@@ -21,19 +21,19 @@ namespace Pierre.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
-    // [TestMethod]
-    // public void GetDescription_ReturnsDescription_String()
-    // {
-    //   //Arrange
-    //   string description = "";
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      //Arrange
+      string description = "";
 
-    //   //Act
-    //   Order newOrder = new Order(description);
-    //   string result = newOrder.Description;
+      //Act
+      Order newOrder = new Order(description);
+      string result = newOrder.Description;
 
-    //   //Assert
-    //   Assert.AreEqual(description, result);
-    // }
+      //Assert
+      Assert.AreEqual(description, result);
+    }
 
     // [TestMethod]
     // public void SetDescription_SetDescription_String()
