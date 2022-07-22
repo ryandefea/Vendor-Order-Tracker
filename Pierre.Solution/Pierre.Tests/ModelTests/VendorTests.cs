@@ -35,19 +35,19 @@ namespace Pierre.Tests
       Assert.AreEqual(name, result);
     }
 
-    // [TestMethod]
-    // public void GetId_ReturnsAlbumId_Int()
-    // {
-    //   //Arrange
-    //   string name = "Test Album";
-    //   Album newAlbum = new Album(name);
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      string name = "Suzie's Cafe";
+      Vendor newVendor = new Vendor(name);
 
-    //   //Act
-    //   int result = newAlbum.Id;
+      //Act
+      int result = newVendor.Id;
 
-    //   //Assert
-    //   Assert.AreEqual(1, result);
-    // }
+      //Assert
+      Assert.AreEqual(1, result);
+    }
 
     // [TestMethod]
     // public void GetAll_ReturnsAllAlbumObjects_AlbumList()
