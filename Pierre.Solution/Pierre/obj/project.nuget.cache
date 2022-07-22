@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "M0aeuhcJ8mGcw+QW88C6l5uHSPEYAsM/kL7ULBKzofCu8PnryUfZ1zWkjAn5bxiwzXhkBhkQtrJVujNJ1eUHsA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ryan\\Desktop\\Vendor-Order-Tracker\\Pierre.Solution\\Pierre\\Pierre.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ryan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
