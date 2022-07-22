@@ -82,22 +82,22 @@ namespace Pierre.Tests
       Assert.AreEqual(newVendor2, result);
     }
 
-    // [TestMethod]
-    // public void AddItem_AssociatesItemWithCategory_ItemList()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
-    //   Song newSong = new Song(description);
-    //   List<Song> newList = new List<Song> { newSong };
-    //   string name = "Work";
-    //   Album newAlbum = new Album(name);
-    //   newAlbum.AddSong(newSong);
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      //Arrange
+      string description = "Hotdogs";
+      Order newOrder = new Order(description);
+      List<Order> newList = new List<Order> { newOrder };
+      string name = "Suzie's Cafe";
+      Vendor newVendor = new Vendor(name);
+      newVendor.AddOrder(newOrder);
 
-    //   //Act
-    //   List<Song> result = newAlbum.Songs;
+      //Act
+      List<Order> result = newVendor.Orders;
 
-    //   //Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
