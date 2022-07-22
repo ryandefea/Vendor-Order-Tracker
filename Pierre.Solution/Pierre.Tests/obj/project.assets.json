@@ -2008,14 +2008,14 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "Catalogue/1.0.0": {
+      "Pierre/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/Catalogue.dll": {}
+          "bin/placeholder/Pierre.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Catalogue.dll": {}
+          "bin/placeholder/Pierre.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -6691,34 +6691,34 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "Catalogue/1.0.0": {
+    "Pierre/1.0.0": {
       "type": "project",
-      "path": "../Catalogue/Catalogue.csproj",
-      "msbuildProject": "../Catalogue/Catalogue.csproj"
+      "path": "../Pierre/Pierre.csproj",
+      "msbuildProject": "../Pierre/Pierre.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Catalogue >= 1.0.0",
       "MSTest.TestAdapter >= 1.2.0",
       "MSTest.TestFramework >= 1.2.0",
-      "Microsoft.NET.Test.Sdk >= 15.0.0"
+      "Microsoft.NET.Test.Sdk >= 15.0.0",
+      "Pierre >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "/Users/mherbert/.nuget/packages/": {}
+    "C:\\Users\\Ryan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mherbert/Desktop/Music-Catalogue/Catalogue.Solution/Catalogue.Tests/Song.Tests.csproj",
-      "projectName": "Song.Tests",
-      "projectPath": "/Users/mherbert/Desktop/Music-Catalogue/Catalogue.Solution/Catalogue.Tests/Song.Tests.csproj",
-      "packagesPath": "/Users/mherbert/.nuget/packages/",
-      "outputPath": "/Users/mherbert/Desktop/Music-Catalogue/Catalogue.Solution/Catalogue.Tests/obj/",
+      "projectUniqueName": "C:\\Users\\Ryan\\Desktop\\Vendor-Order-Tracker\\Pierre.Solution\\Pierre.Tests\\Pierre.Tests.csproj",
+      "projectName": "Pierre.Tests",
+      "projectPath": "C:\\Users\\Ryan\\Desktop\\Vendor-Order-Tracker\\Pierre.Solution\\Pierre.Tests\\Pierre.Tests.csproj",
+      "packagesPath": "C:\\Users\\Ryan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ryan\\Desktop\\Vendor-Order-Tracker\\Pierre.Solution\\Pierre.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/mherbert/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Ryan\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -6730,8 +6730,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/mherbert/Desktop/Music-Catalogue/Catalogue.Solution/Catalogue/Catalogue.csproj": {
-              "projectPath": "/Users/mherbert/Desktop/Music-Catalogue/Catalogue.Solution/Catalogue/Catalogue.csproj"
+            "C:\\Users\\Ryan\\Desktop\\Vendor-Order-Tracker\\Pierre.Solution\\Pierre\\Pierre.csproj": {
+              "projectPath": "C:\\Users\\Ryan\\Desktop\\Vendor-Order-Tracker\\Pierre.Solution\\Pierre\\Pierre.csproj"
             }
           }
         }
@@ -6774,7 +6774,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
