@@ -21,9 +21,9 @@ namespace Pierre.Controllers
     }
 
     [HttpPost("/vendors")]
-    public ActionResult Create(string vendorName)
+    public ActionResult Create(string vendorName, string vendorDetails)
     {
-      Vendor newVendor = new Vendor(vendorName);
+      Vendor newVendor = new Vendor(vendorName, vendorDetails);
       return RedirectToAction("Index");
     }
 
@@ -37,7 +37,7 @@ namespace Pierre.Controllers
       model.Add("orders", vendorOrders);
       return View(model);
     }
-    // this one creates new orders within a given vendor, not new vendorss;
+    // this one creates new orders within a given vendor, not new vendors;
     [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult New(int vendorId, string orderDescription)
     {
