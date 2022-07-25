@@ -36,20 +36,6 @@ namespace Pierre.Tests
       Assert.AreEqual(description, result);
     }
 
-    [TestMethod]
-    public void GetDescription_ReturnsDescription_String()
-    {
-      //Arrange
-      string description = "Hotdogs";
-      double price = 5;
-
-      //Act
-      Order newOrder = new Order(description, price);
-      string result = newOrder.Description;
-
-      //Assert
-      Assert.AreEqual(description, result);
-    }
 
     [TestMethod]
     public void SetDescription_SetDescription_String()
