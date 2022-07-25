@@ -95,7 +95,8 @@ namespace Pierre.Tests
       string description = "Hotdogs";
       double price = 5;
       string title = "Suzie's Hotdogs";
-      Order newOrder = new Order(description, price, title);
+      DateTime date = new DateTime(1990,05,23);
+      Order newOrder = new Order(description, price, title, date);
       List<Order> newList = new List<Order> { newOrder };
       string name = "Suzie's Cafe";
       string details = "Suzie Detail";

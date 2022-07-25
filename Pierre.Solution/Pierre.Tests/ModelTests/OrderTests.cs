@@ -17,7 +17,8 @@ namespace Pierre.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test", 5);
+      DateTime date = new DateTime(1990, 05, 23);
+      Order newOrder = new Order("test", 5, "test order", date);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,11 +26,13 @@ namespace Pierre.Tests
     public void GetDescription_ReturnsDescription_String()
     {
       //Arrange
+      string title = "test title";
       string description = "Hotdogs";
       double price = 5;
+      DateTime date = new DateTime(1990, 05, 23);
 
       //Act
-      Order newOrder = new Order(description, price);
+      Order newOrder = new Order(description, price, title, date);
       string result = newOrder.Description;
 
       //Assert
@@ -41,9 +44,11 @@ namespace Pierre.Tests
     public void SetDescription_SetDescription_String()
     {
       //Arrange
+      string title = "test title";
       string description = "Hotdogs";
       double price = 5;
-      Order newOrder = new Order(description, price);
+      DateTime date = new DateTime(1990, 05, 23);
+      Order newOrder = new Order(description, price, title, date);
 
       //Act
       string updatedDescription = "Buns";
@@ -73,10 +78,15 @@ namespace Pierre.Tests
       //Arrange
       string description01 = "Hotdogs";
       double price01 = 5;
+      string title01 = "test title1";
+      DateTime date01 = new DateTime(1990, 05, 23);
+
       string description02 = "Buns";
+      string title02 = "test title1";
       double price02 = 3; 
-      Order newOrder1 = new Order(description01, price01);
-      Order newOrder2 = new Order(description02, price02);
+      DateTime date02 = new DateTime(1990, 05, 23);
+      Order newOrder1 = new Order(description01, price01, title01, date01);
+      Order newOrder2 = new Order(description02, price02, title02, date02);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       //Act
@@ -91,7 +101,9 @@ namespace Pierre.Tests
     {
       string description = "Hotdogs";
       double price = 5; 
-      Order newOrder = new Order(description, price);
+      string title = "Hotdog order";
+      DateTime date = new DateTime(1990, 05, 23);
+      Order newOrder = new Order(description, price, title, date);
       int result = newOrder.Id;
       Assert.AreEqual(1,result);
     }
@@ -102,10 +114,17 @@ namespace Pierre.Tests
       //Arrange
       string description01 = "Hotdogs";
       double price01 = 5;
+      string title01 = "Hotdogs Order1";
+      DateTime date01 = new DateTime(1990, 05, 23);
+
       string description02 = "Buns";
       double price02 = 3; 
-      Order newOrder1 = new Order(description01, price01);
-      Order newOrder2 = new Order(description02, price02);
+      string title02 = "Hotdogs Order1";
+      DateTime date02 = new DateTime(1990, 05, 23);
+
+      
+      Order newOrder1 = new Order(description01, price01, title01, date01);
+      Order newOrder2 = new Order(description02, price02, title02, date02);
 
       //Act
       Order result = Order.Find(2);
