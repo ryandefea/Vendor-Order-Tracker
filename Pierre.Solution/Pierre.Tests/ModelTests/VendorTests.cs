@@ -17,7 +17,7 @@ namespace Pierre.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("test vendor");
+      Vendor newVendor = new Vendor("Suzie", "Suzie's Donuts");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
@@ -25,8 +25,9 @@ namespace Pierre.Tests
     public void GetName_ReturnsName_String()
     {
       //Arrange
-      string name = "Suzie's Cafe";
-      Vendor newVendor = new Vendor(name);
+      string name = "Suzie";
+      string details = "Suzie's Cafe";
+      Vendor newVendor = new Vendor(name, details);
 
       //Act
       string result = newVendor.Name;
@@ -39,8 +40,9 @@ namespace Pierre.Tests
     public void GetId_ReturnsVendorId_Int()
     {
       //Arrange
-      string name = "Suzie's Cafe";
-      Vendor newVendor = new Vendor(name);
+      string name = "Test Vendor";
+      string details = "Test Details";
+      Vendor newVendor = new Vendor(name, details);
 
       //Act
       int result = newVendor.Id;
@@ -54,9 +56,11 @@ namespace Pierre.Tests
     {
       //Arrange
       string name01 = "Suzie's Cafe";
+      string details01 = "Suzie Detail";
       string name02 = "Trevett's Cafe";
-      Vendor newVendor1 = new Vendor(name01);
-      Vendor newVendor2 = new Vendor(name02);
+      string details02 = "Trevett's Detail";
+      Vendor newVendor1 = new Vendor(name01, details01);
+      Vendor newVendor2 = new Vendor(name02, details02);
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
       //Act
@@ -71,9 +75,11 @@ namespace Pierre.Tests
     {
       //Arrange
       string name01 = "Suzie's Cafe";
+      string details01 = "Suzie Detail";
       string name02 = "Trevett's Cafe";
-      Vendor newVendor1 = new Vendor(name01);
-      Vendor newVendor2 = new Vendor(name02);
+      string details02 = "Trevett's Detail";
+      Vendor newVendor1 = new Vendor(name01, details01);
+      Vendor newVendor2 = new Vendor(name02, details02);
 
       //Act
       Vendor result = Vendor.Find(2);
@@ -87,10 +93,13 @@ namespace Pierre.Tests
     {
       //Arrange
       string description = "Hotdogs";
-      Order newOrder = new Order(description);
+      double price = 5;
+      string title = "Suzie's Hotdogs";
+      Order newOrder = new Order(description, price, title);
       List<Order> newList = new List<Order> { newOrder };
       string name = "Suzie's Cafe";
-      Vendor newVendor = new Vendor(name);
+      string details = "Suzie Detail";
+      Vendor newVendor = new Vendor(name, details);
       newVendor.AddOrder(newOrder);
 
       //Act
