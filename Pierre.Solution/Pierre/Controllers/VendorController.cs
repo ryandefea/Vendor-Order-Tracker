@@ -39,11 +39,11 @@ namespace Pierre.Controllers
     }
     // this one creates new orders within a given vendor, not new vendors;
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult New(int vendorId, string orderDescription)
+    public ActionResult New(int vendorId, string orderDescription, double price, string title, DateTime date)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
-      Order newOrder = new Order(orderDescription);
+      Order newOrder = new Order(orderDescription, price, title, date);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);

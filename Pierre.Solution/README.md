@@ -25,7 +25,7 @@ C# application that tracks vendors orders using GET and POST requests/responses 
 
 
 ## Known Bugs
-* price and date features are not yet supported.
+* none at this time.
 
 ## License
 [MIT](https://www.mit.edu/~amini/LICENSE.md) 
